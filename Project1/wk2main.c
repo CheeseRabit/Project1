@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "list.h"
-
+#include "list.h";
+#include "bst.h";
 
 void option_insert(List *my_list) {
 	int input;
@@ -46,6 +46,14 @@ int main() {
 	int input = 1;
 
 	while (quit == 0) {
+
+		printf("0 quit\n");
+		printf("1 insert\n");
+		printf("2 delete\n");
+		printf("3 print\n");
+		printf("4 reverse\n");
+		printf("5 tree test\n");
+
 		int option;
 		scanf_s("%d", &option);
 
@@ -59,6 +67,8 @@ int main() {
 			case 3:	option_print(&my_list);
 				break;
 			case 4:	reverse_list(&my_list);
+				break;
+			case 5: bst_test();
 		}
 	}
 
